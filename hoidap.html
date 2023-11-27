@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỏi đáp</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .qa-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .qa-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .question,
+        .answer {
+            margin-top: 20px;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .question:hover,
+        .answer:hover {
+            background-color: #ecf0f1;
+        }
+
+        .question h3,
+        .answer h3 {
+            color: #2c3e50;
+        }
+
+        img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 5px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #2c3e50;
+        }
+
+        input[type="submit"] {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #34495e;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: right;
+        }
+
+        .footer-logo {
+            max-width: 80px;
+            height: auto;
+        }
+
+        .email-input {
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+        .tv {
+            background-color: rgb(0, 145, 255);
+            color: white;
+            height: 45px;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .tv a:hover{
+            color: yellow;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.jpg" alt="Logo">
+        <br>
+        <div class="tv">
+        <a href="index.html">Trang chủ</a>
+        <a href="docthem.html">Giới thiệu</a>
+        <a href="gopy.html">Góp Ý</a> 
+        <a href="hoidap.html">Hỏi Đáp </a>
+        <a href="lienhe.html">Liên hệ</a>
+    </div>
+        <h1>Hỏi và Đáp - Trường Trung học Phổ thông Nam Triệu Thủy Nguyên</h1>
+    </header>
+
+    <div class="qa-container">
+
+        <div class="question">
+            <h3>Câu hỏi 1: Thời gian giảng dạy của trường là bao lâu mỗi ngày?</h3>
+            <p>Đáp: Thời gian giảng dạy tại Trường Trung học Phổ thông Nam Triệu Thủy Nguyên là từ 7:30 sáng đến 4:30 chiều.</p>
+        </div>
+
+        <div class="question">
+            <h3>Câu hỏi 2: Trường có những hoạt động ngoại khóa nào?</h3>
+            <p>Đáp: Trường chú trọng vào hoạt động ngoại khóa, bao gồm các câu lạc bộ học thuật, nghệ thuật và thể thao như câu lạc bộ tin học, hội họa, bóng đá, và nhiều hoạt động khác.</p>
+        </div>
+
+        <div class="question">
+            <h3>Câu hỏi 3: Làm thế nào để đăng ký nhập học tại trường?</h3>
+            <p>Đáp: Quý phụ huynh có thể tìm hiểu thông tin về quy trình đăng ký và các văn bản liên quan trên trang web chính thức của trường hoặc liên hệ trực tiếp với văn phòng tuyển sinh.</p>
+        </div>
+
+        <div class="question">
+            <h3>Câu hỏi 4: Trường có những chương trình học đặc biệt nào không?</h3>
+            <p>Đáp: Có, Trường Trung học Phổ thông Nam Triệu Thủy Nguyên cung cấp nhiều chương trình học đặc biệt như chương trình học cao cấp, chương trình ngoại ngữ, và nhiều chương trình đào tạo khác để đáp ứng nhu cầu và khả năng của học sinh.</p>
+        </div>
+
+        <form action="/submit_question" method="post">
+            <label for="ask">Đặt câu hỏi của bạn:</label>
+            <textarea id="ask" name="ask" required></textarea>
+            <input type="submit" value="Đặt câu hỏi">
+            <label for="email">Địa chỉ email:</label>
+            <input type="email" id="email" name="email" required>
+        </form>
+
+    </div>
+
+    <footer>
+        <img class="footer-logo" src="logo2.jpg" alt="Footer Logo">
+        <span>Email liên hệ: <a href="thptnamtrieu.edu.vn">thptnamtrieu.edu.vn</a></span>
+    </footer>
+
+        <br>
+    
+</body>
+</html>
